@@ -1,0 +1,59 @@
+\section{Text}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+    文字包括中文可以直接打,公式输入也和LateX一样:
+    $\sum_{i=1}^n i$\\
+    \begin{equation}\label{eq1}
+        x^n+y^n=z^n
+    \end{equation}
+    引用公式也一样(\ref{eq1})
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+    列出提纲 \pause
+    \begin{itemize}
+        \item 第一点 \pause
+        \item 第二点 \pause
+        \item 第三点
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+    数学定义定理引理推论
+    \begin{definition}
+    \end{definition}
+    \begin{theorem}
+        There exists an infinite set.
+    \end{theorem}
+    \begin{proof}
+        This follows from the axiom of infinity.
+    \end{proof}
+    \begin{example}[Natural Numbers]
+        The set of natural numbers is infinite.
+    \end{example}
+    \begin{lemma}
+    \end{lemma}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\secname}
+    代码
+    % 在lstlisting框内所有字符都会被输出
+    % 所以代码前面要是有空格也会被输出，故而代码都没有缩进
+    \begin{lstlisting}
+#include<iostream>
+int main()
+{
+    //c++
+    std::cout<<"hello world!"<<std::endl;
+    return 0;
+}
+$\pi^\pi$
+$\$$
+    \end{lstlisting}
+    要用空格代替tab，frame要加上fragile选项。
+    高亮也有点怪
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{「\secname」}
+    hello \cite{test1} 
+\end{frame}

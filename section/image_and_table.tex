@@ -1,0 +1,41 @@
+\section{Image and table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+    浮动图片
+    \begin{figure} 
+        \centering
+        \includegraphics[width=2in,height=2in]{img1.png}
+        \caption{This is an inserted PNG graphic}
+        \label{img:1}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{\secname}
+    非浮动图片，即嵌入文本中的图片
+    \includegraphics[width=2in,height=2in]{img1.png}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+    行内表格
+    %\multicolumn{n}{format}{item}
+    \begin{tabular}{c|c|c}
+        \hline \multicolumn{3}{c}{a}\\
+        \hline 7&5&3\\
+        \hline 6&1&8\\
+        \hline
+    \end{tabular}
+        
+    嵌入式表格
+    \begin{table}[]
+        \centering
+        \caption{This is an inserted table}
+        \label{tbl:1}
+        \begin{tabular}{c|c|c}
+            \hline \multicolumn{3}{c}{a}\\
+            \hline 7&5&3\\
+            \hline 6&1&8\\
+            \hline
+        \end{tabular}
+    \end{table}
+    
+\end{frame}

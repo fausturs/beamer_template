@@ -1,0 +1,46 @@
+\documentclass[10pt, mathserif]{beamer}
+%设置input和include搜索路径
+%不加这个设置可以在input时指定路径，但是include不知道为什么编译错误
+%所以还是加上好了
+\makeatletter
+\providecommand*\input@path{}
+\newcommand\addinputpath[1]{
+  \expandafter\def\expandafter\input@path
+  \expandafter{\input@path{#1}}}
+\addinputpath{section/}
+\addinputpath{setting/}
+\makeatother
+%一些配置文件
+%里面包括倒入的包以及包的一些配置
+\input{setting}
+\input{listings_setting}
+
+
+\title{demo for beamer}
+\author{Wuxunxian}
+\date{\today}
+%
+\begin{document}
+%扉页
+\begin{frame}
+    \titlepage
+\end{frame}
+%总目录
+\begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%从这里开始是正文
+%一般的文本
+\input{text}
+%
+\input{image_and_table}
+
+%reference
+\begin{frame}[t,allowframebreaks]{References}
+  \bibliography{bib/bibfile}
+\end{frame}
+
+\end{document}

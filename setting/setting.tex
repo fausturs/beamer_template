@@ -1,0 +1,40 @@
+\usetheme{metropolis}
+% \usetheme{Madrid}
+% 每个section之前显示一次目录
+% 每个主题对自己的这个函数都有默认定义，比如Madrid的定义就如下
+% 而metropolis自定义的其实还蛮好看的，在下面重写这个函数可以覆盖默认的
+% 但是写在usetheme之前就不行
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection, hideallsubsections]
+  \end{frame}
+}
+
+% 让未显示的内容半透明
+\setbeamercovered{dynamic}
+% 隐藏右下角的导航栏
+\setbeamertemplate{navigation symbols}{}
+% 页码
+% \setbeamertemplate{footline}{\footnotesize \insertframenumber/\inserttotalframenumber \hfill}
+% 不知道是啥
+% \usepackage{beamerthemesplit}
+
+
+% 中文支持
+\usepackage{xeCJK} 
+%
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+% 导入图片
+\usepackage{graphicx} 
+% 图片搜索路径
+\graphicspath{{image/}}
+
+%文献引用
+\usepackage{bibentry}
+%设置格式
+\bibliographystyle{plain}
+% \bibliographystyle{IEEEtran}

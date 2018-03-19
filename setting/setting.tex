@@ -14,8 +14,12 @@
 
 % 让未显示的内容半透明
 \setbeamercovered{dynamic}
+% 让未显示的内容看不到。默认设置
+% \setbeamercovered{invisible}
+
 % 隐藏右下角的导航栏
 \setbeamertemplate{navigation symbols}{}
+\beamertemplatenavigationsymbolsempty
 % 页码
 % \setbeamertemplate{footline}{\footnotesize \insertframenumber/\inserttotalframenumber \hfill}
 % 不知道是啥
@@ -27,6 +31,17 @@
 %
 \usepackage{amssymb} %maths
 \usepackage{amsmath} %maths
+\usepackage{mathrsfs}
+\usepackage{esint}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+
+% 下面这句很重要！！！！
+% xelatex和beamer在一起输入公式的时候 字母会偏右 用这个可以解决
+\usefonttheme{professionalfonts} 
 
 % 导入图片
 \usepackage{graphicx} 
